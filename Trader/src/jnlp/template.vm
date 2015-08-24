@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="http://timefinder.sourceforge.net/jnlp2" href="$outputFile">
+ <information>
+    <title>Blueprint Capital FX Trading Platform</title>
+    <vendor>Blueprint Capital FX Technology Team</vendor>
+    <homepage href="http://blueprint-capital.co.uk/"/>
+    <description kind="one-line">Blueprint Capital FX Trading Platform</description>
+    <description kind="short">Blueprint Capital provides fast and reliable execution on our platform.</description>
+    <description kind="tooltip">Blueprint Capital provides fast and reliable execution on our platform.</description>
+    <icon href="http://timefinder.sourceforge.net/jnlp/shamrockwhite.jpg" kind="default"/>
+    <shortcut online="false"><desktop/><menu submenu="TimeFiner"/></shortcut>
+ </information>
+ <security>
+ <all-permissions/>
+ </security>
+ <resources>
+    <j2se version="1.6+" initial-heap-size="32m" max-heap-size="128m" />
+    <property name="jnlp.versionEnabled" value="true"/>
+    $dependencies
+ </resources>
+ <application-desc main-class="$mainClass">
+ </application-desc>
+</jnlp>
