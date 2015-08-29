@@ -2617,9 +2617,7 @@ public class TradingUI extends javax.swing.JFrame {
     }
 
     public void sessionTimeout() {
-
         String errorMsg = "Your session has timed out due to inactivity \nPlease log in again to enable trading";
-
         javax.swing.JOptionPane.showMessageDialog(this, errorMsg, "Session Timed Out", javax.swing.JOptionPane.WARNING_MESSAGE);
     }
 
@@ -4521,7 +4519,6 @@ public class TradingUI extends javax.swing.JFrame {
         String symbol = (String) posTable.getValueAt(posselectedRowIndex, 2);
         int size = (int) posTable.getValueAt(posselectedRowIndex, 3);
         String side = (String) posTable.getValueAt(posselectedRowIndex, 4);
-        double price = (double) posTable.getValueAt(posselectedRowIndex, 5);
         String currency = symbol.substring(Math.max(0, symbol.length() - 3));
         Double oldStopPrice = (Double) posTable.getValueAt(posselectedRowIndex, 6);
         Double oldLimitPrice = (Double) posTable.getValueAt(posselectedRowIndex, 7);
@@ -4545,8 +4542,9 @@ public class TradingUI extends javax.swing.JFrame {
         if (editLimit.isSelected()) {
             newLimitPrice = (Double) editLimitRate.getValue();
         }
-
+        editOrder.setTradeId(orderId);
         editOrder.setQty(size);
+        editOrder.setSide(sidein.charAt(0));
         editOrder.setSymbol(symbol);
         editOrder.setSide(buysell);
         editOrder.setUserId(userId);
